@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
 
   resources :sessions, only: [:create]
-  resources :registrations, only: [:create]
+  resources :registrations, only: [:create, :index, :show]
   delete :logout, to: 'sessions#logout'
   get :logged_in, to: 'sessions#loggedin'
   # Defines the root path route ("/")
