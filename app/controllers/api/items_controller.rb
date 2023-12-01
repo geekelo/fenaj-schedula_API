@@ -29,4 +29,29 @@ class Api::ItemsController < ApplicationController
       user:
     }
   end
+
+  def create
+    item = Item.new(item_params)
+
+    if item.save
+      render json: item, status: :ok
+    else
+      render json: { message: 'ERROR: Unable to create item' }, status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def item_params
+    params.require(:item).permit(
+      :name,
+      :description,
+      :deposit,
+      :spa_session_fee,
+      :registration_fee,
+      :total_amount_payable,
+      :duration,
+      :user_id
+    )
+  end
 end
