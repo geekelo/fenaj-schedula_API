@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -8,7 +6,7 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
 
   resources :sessions, only: [:create]
-  resources :registrations, only: [:create, :index, :show]
+  resources :registrations, only: %i[create index show]
   delete :logout, to: 'sessions#logout'
   get :logged_in, to: 'sessions#loggedin'
   # Defines the root path route ("/")

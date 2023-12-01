@@ -29,4 +29,29 @@ class Api::ItemsController < ApplicationController
       user:
     }
   end
+
+  # def create
+  #   session = Session.new(session_params)
+
+  #   if session.save
+  #     render json: session, status: :ok
+  #   else
+  #     render json: { message: 'ERROR: Unable to create session' }, status: :unprocessable_entity
+  #   end
+  # end
+
+  private
+
+  def session_params
+    params.require(:session).permit(
+      :name,
+      :description,
+      :deposit,
+      :spa_session_fee,
+      :registration_fee,
+      :total_amount_payable,
+      :duration,
+      :user_id
+    )
+  end
 end
