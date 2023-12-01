@@ -1,5 +1,5 @@
 class Api::ItemsController < ApplicationController
-  before_action :set_api_session, only: %i[ show edit update destroy ]
+  before_action :set_api_session, only: %i[show edit update destroy]
 
   # GET /api/items or /api/items.json
   def index
@@ -7,6 +7,5 @@ class Api::ItemsController < ApplicationController
   end
 
   # GET /api/items/1 or /api/items/1.json
-  def show
-  end
+  def show; end
 end

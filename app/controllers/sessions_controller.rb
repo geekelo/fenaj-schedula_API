@@ -9,7 +9,7 @@ class SessionsController < ApplicationController include CurrentUserConcern
       render json: {
         status: :created,
         logged_in: true,
-        user: user
+        user
       }
     else
       render json: { status: 401 }

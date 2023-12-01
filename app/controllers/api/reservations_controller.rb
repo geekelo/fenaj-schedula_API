@@ -5,6 +5,5 @@ class Api::ReservationsController < ApplicationController
   end
 
   # GET /api/reservations/1 or /api/reservations/1.json
-  def show
-  end
+  def show; end
 end
