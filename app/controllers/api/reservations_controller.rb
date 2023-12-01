@@ -7,7 +7,7 @@ class Api::ReservationsController < ApplicationController
       city:,
       date:,
       user:,
-      item:
+      item:,
     }
   end
 
@@ -17,18 +17,17 @@ class Api::ReservationsController < ApplicationController
       city:,
       date:,
       user:,
-      item:
+      item:,
     }
   end
 
   # DELETE /api/reservations/1 or /api/reservations/1.json
   def destroy
     item = Item.find(params[:id])
-
     if item.destroy
-      render json: { status: 'success', message: 'Item deleted successfully' }
+      render json: { status: "success", message: "Item deleted successfully" }
     else
-      render json: { status: 'error', message: 'Failed to delete the item' }, status: :unprocessable_entity
+      render json: { status: "error", message: "Failed to delete the item" }, status: :unprocessable_entity
     end
   end
 end
