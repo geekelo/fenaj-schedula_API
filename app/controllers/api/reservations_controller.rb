@@ -21,16 +21,16 @@ class Api::ReservationsController < ApplicationController
     }
   end
 
-  def create 
+  def create
     reservation = Reservation.new(reservation_params)
 
-    if reservation.save 
-      render json: { message: 'Reservation has been successfully created.'}, status: :ok
-      
+    if reservation.save
+      render json: { message: 'Reservation has been successfully created.' }, status: :ok
+
       item = Item.find_by(id: reservation_params[:item_id])
       item.update(available: false) if item.present?
     else
-      render json: {message: 'ERROR: unable to create reservation.'}, status: :unprocessable_entity
+      render json: { message: 'ERROR: unable to create reservation.' }, status: :unprocessable_entity
     end
   end
 
