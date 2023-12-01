@@ -7,7 +7,7 @@ class Api::ReservationsController < ApplicationController
       city:,
       date:,
       user:,
-      item:,
+      item:
     }
   end
 
@@ -17,17 +17,36 @@ class Api::ReservationsController < ApplicationController
       city:,
       date:,
       user:,
-      item:,
+      item:
     }
+  end
+
+  def create
+    reservation = Reservation.new(reservation_params)
+
+    if reservation.save
+      render json: { message: 'Reservation has been successfully created.' }, status: :ok
+
+      item = Item.find_by(id: reservation_params[:item_id])
+      item.update(available: false) if item.present?
+    else
+      render json: { message: 'ERROR: unable to create reservation.' }, status: :unprocessable_entity
+    end
   end
 
   # DELETE /api/reservations/1 or /api/reservations/1.json
   def destroy
     item = Item.find(params[:id])
     if item.destroy
-      render json: { status: "success", message: "Item deleted successfully" }
+      render json: { status: 'success', message: 'Item deleted successfully' }
     else
-      render json: { status: "error", message: "Failed to delete the item" }, status: :unprocessable_entity
+      render json: { status: 'error', message: 'Failed to delete the item' }, status: :unprocessable_entity
     end
+  end
+
+  private
+
+  def reservation_params
+    params.require(:reservation).permit(:city, :date, :user_id, :item_id)
   end
 end
