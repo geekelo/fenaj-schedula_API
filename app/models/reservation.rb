@@ -3,7 +3,7 @@ class Reservation < ApplicationRecord
   belongs_to :session
 
   validates :user, presence: true
-  validates :course, presence: true
+  validates :session, presence: true
   validates :city, presence: true
   validates :date, presence: true
 end
