@@ -11,7 +11,7 @@
 user1 = User.create(username: "Wali", email:'wali@gmail.com',password_digest:12345678 )
 user2 = User.create(username: "Fatima", email:'fatima@gmail.com',password_digest:12345678 )
 
-session = Session.create(
+item = Item.create(
   name: 'Second Spa session',
   description: 'th is the second spa session',
   deposit: 1,
@@ -20,4 +20,4 @@ session = Session.create(
   total_amount_payable: 300,
   duration: 1
 )
-session.image.attach(io: File.open(Rails.root.join('app/assets/images/img.jpg')), filename: 'img.jpg', content_type: 'image/jpg')
+item.image.attach(io: File.open(Rails.root.join('app/assets/images/img.jpg')), filename: 'img.jpg', content_type: 'image/jpg')

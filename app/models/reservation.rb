@@ -1,9 +1,4 @@
 class Reservation < ApplicationRecord
-  belongs_to :user
-  belongs_to :session
-
-  validates :user, presence: true
-  validates :session, presence: true
-  validates :city, presence: true
-  validates :date, presence: true
+  belongs_to :user, dependent: :destroy
+  belongs_to :item, dependent: :destroy
 end

@@ -1,6 +1,6 @@
-class Session < ApplicationRecord
+class Item < ApplicationRecord
   has_many :reservations, dependent: :destroy
-  belongs_to :user
+  belongs_to :user, dependent: :destroy
 
   has_one_attached :image
 
