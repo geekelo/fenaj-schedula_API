@@ -31,19 +31,19 @@ class Api::ItemsController < ApplicationController
   end
 
   def create
-    session = Session.new(session_params)
+    item = Item.new(item_params)
 
-    if session.save
-      render json: session, status: :ok
+    if item.save
+      render json: item, status: :ok
     else
-      render json: { message: 'ERROR: Unable to create session' }, status: :unprocessable_entity
+      render json: { message: 'ERROR: Unable to create item' }, status: :unprocessable_entity
     end
   end
 
   private
 
-  def session_params
-    params.require(:session).permit(
+  def item_params
+    params.require(:item).permit(
       :name,
       :description,
       :deposit,
