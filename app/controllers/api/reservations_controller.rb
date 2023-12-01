@@ -20,4 +20,10 @@ class Api::ReservationsController < ApplicationController
       item:
     }
   end
+
+  private
+
+  def reservation_params
+    params.require(:reservation).permit(:city, :date, :user, :item)
+  end
 end
