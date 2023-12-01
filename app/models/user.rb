@@ -4,7 +4,6 @@ class User < ApplicationRecord
   has_many :items
   has_many :items, through: :reservations
 
-
   validates_presence_of :email
   validates_uniqueness_of :email
 end
