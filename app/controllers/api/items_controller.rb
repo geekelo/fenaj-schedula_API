@@ -3,9 +3,30 @@ class Api::ItemsController < ApplicationController
 
   # GET /api/items or /api/items.json
   def index
-    @api_sessions = Api::Session.all
+    @api_items = Api::Item.all
+    render json: {
+      name:,
+      description:,
+      deposit:,
+      spa_session_fee:,
+      registration_fee:,
+      total_amount_payable:,
+      duration:,
+      user:
+    }
   end
 
   # GET /api/items/1 or /api/items/1.json
-  def show; end
+  def show
+    render json: {
+      name:,
+      description:,
+      deposit:,
+      spa_session_fee:,
+      registration_fee:,
+      total_amount_payable:,
+      duration:,
+      user:
+    }
+  end
 end
