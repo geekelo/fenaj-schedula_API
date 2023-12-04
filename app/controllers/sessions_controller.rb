@@ -36,4 +36,13 @@ class SessionsController < ApplicationController include CurrentUserConcern
       logged_out: true
     }
   end
+
+  def destroy
+    user = User.find(params[:id])
+    if user.destroy
+      render json: { status: 'success', message: 'Session deleted successfully' }
+    else
+      user json: { status: 'error', message: 'Failed to delete the session' }, status: :unprocessable_entity
+    end
+  end
 end
