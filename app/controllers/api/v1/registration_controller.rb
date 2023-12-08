@@ -21,7 +21,7 @@ module Api
       end
 
       def email_exists(email)
-        User.exists?(email: email)
+        User.exists?(email: )
       end
     end
   end
