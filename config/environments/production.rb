@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
@@ -47,6 +45,7 @@ Rails.application.configure do
   config.force_ssl = true
 
   # Log to STDOUT by default
+
   config.logger = ActiveSupport::Logger.new($stdout)
                                        .tap  { |logger| logger.formatter = ::Logger::Formatter.new }
                                        .then { |logger| ActiveSupport::TaggedLogging.new(logger) }
