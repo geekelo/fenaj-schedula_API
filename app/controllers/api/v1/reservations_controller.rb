@@ -21,8 +21,8 @@ class Api::V1::ReservationsController < ApplicationController
     if reservation.save
       render json: { message: 'Reservation has been successfully created.' }, status: :ok
 
-      item = Item.find_by(id: reservation_params[:item_id])
-      item.update(available: false) if item.present?
+    #  item = Item.find_by(id: reservation_params[:item_id])
+    #  item.update(available: false) if item.present?
     else
       render json: { message: 'ERROR: unable to create reservation.' }, status: :unprocessable_entity
     end
@@ -50,17 +50,17 @@ class Api::V1::ReservationsController < ApplicationController
       city: reservation.city,
       date: reservation.date,
       user_id: reservation.user_id,
-       item_id: reservation.item_id,
-      item: {
-        id: reservation.item.id,
-        name: reservation.item.name, 
-        description: reservation.item.description,
-        spa_session_fee: reservation.item.spa_session_fee,
-        registration_fee: reservation.item.registration_fee,
-        total_amount_payable: reservation.item.total_amount_payable,
-        duration: reservation.item.duration,
-        image: reservation.item.image.present? ? reservation.item.image : default_image_url
-      }
+       item_id: reservation.item_id
+      # item: {
+      #   id: reservation.item.id,
+      #   name: reservation.item.name, 
+      #   description: reservation.item.description,
+      #   spa_session_fee: reservation.item.spa_session_fee,
+      #   registration_fee: reservation.item.registration_fee,
+      #   total_amount_payable: reservation.item.total_amount_payable,
+      #   duration: reservation.item.duration,
+      #   image: reservation.item.image.present? ? reservation.item.image : default_image_url
+      # }
     }
   end
 end

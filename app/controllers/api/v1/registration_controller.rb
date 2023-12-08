@@ -5,7 +5,7 @@ class Api::V1::RegistrationController < ApplicationController
     else
       user = User.new(signapp_params)
       if user.save
-        render json: { message: 'User created sucessfully' }, status: :ok
+        render json: { message: 'User created sucessfully', user: user }, status: :ok
       else
         render json: { error: 'Something went wrong with creating user' }, status: :unproccessable_entity
       end
@@ -19,6 +19,6 @@ class Api::V1::RegistrationController < ApplicationController
   end
 
   def email_exists(email)
-    User.exists?(email:)
+    User.exists?(email: email)
   end
 end

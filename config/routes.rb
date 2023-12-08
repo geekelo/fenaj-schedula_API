@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       post '/login', to: 'authentication#create'
       resources :items
       # # resources :users
-      # resources :reservations
+      resources :reservations
     end
   end
   # Defines the root path route ("/")
