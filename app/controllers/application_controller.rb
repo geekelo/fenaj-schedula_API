@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ApplicationController < ActionController::API
   attr_reader :current_user
 
@@ -13,6 +11,6 @@ class ApplicationController < ActionController::API
   end
 
   def auth_token
-    @auth_token ||= request.headers.fetch('authorization', '').split(' ').last
+    @auth_token ||= request.headers.fetch('authorization', '').split.last
   end
 end

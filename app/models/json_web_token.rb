@@ -1,11 +1,9 @@
-# frozen_string_literal: true
-
 class JsonWebToken
   def self.encode(payload)
-    JWT.encode(payload, ENV['JWT_SECRET_KEY'], 'HS256')
+    JWT.encode(payload, ENV.fetch('JWT_SECRET_KEY', nil), 'HS256')
   end
 
   def self.decode(token)
-    JWT.decode(token, ENV['JWT_SECRET_KEY'], true, algorithm: 'HS256').first
+    JWT.decode(token, ENV.fetch('JWT_SECRET_KEY', nil), true, algorithm: 'HS256').first
   end
 end
