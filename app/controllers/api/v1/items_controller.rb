@@ -1,5 +1,5 @@
 class Api::V1::ItemsController < ApplicationController
-  before_action :authenticate_token!
+  before_action :authenticate_token!, only: [:show]
 
   def index
   @api_items = Item.all
@@ -52,6 +52,17 @@ end
       render json: { message: 'ERROR: Unable to create item' }, status: :unprocessable_entity
     end
   end
+
+  # DELETE /api/reservations/1 
+  def destroy
+    item = Item.find(params[:id])
+    if item.destroy
+      render json: { status: 'success', message: 'Item deleted successfully' }
+    else
+      render json: { status: 'error', message: 'Failed to delete the Item' }, status: :unprocessable_entity
+    end
+  end
+  
 
   private
 

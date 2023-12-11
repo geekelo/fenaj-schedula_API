@@ -1,7 +1,6 @@
 class Item < ApplicationRecord
   belongs_to :user
   has_many :reservations, dependent: :destroy
-  belongs_to :user, dependent: :destroy
 
   # has_one_attached :image
 
