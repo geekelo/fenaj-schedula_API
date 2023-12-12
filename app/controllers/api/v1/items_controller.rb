@@ -10,6 +10,7 @@ class Api::V1::ItemsController < ApplicationController
       id: item.id,
       name: item.name,
       description: item.description,
+      deposit: item.deposit,
       spa_session_fee: item.spa_session_fee,
       registration_fee: item.registration_fee,
       total_amount_payable: item.total_amount_payable,
