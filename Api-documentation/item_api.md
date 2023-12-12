@@ -32,7 +32,7 @@ All endpoints in this API require authentication. You need to include a valid au
       "spa_session_fee": 100,
       "registration_fee": 500,
       "total_amount_payable": 400,
-      "duration": 5,
+      "duration": 6,
       "user_id": 2
     }
   ]
