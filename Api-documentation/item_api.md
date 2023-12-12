@@ -1,4 +1,4 @@
-<!-- ### Spa Session   Item API Documentation
+### Spa Session   Item API Documentation
 Welcome to the Spa Session Item API documentation. This API allows you to manage spa session items.
 ### Authentication
 All endpoints in this API require authentication. You need to include a valid authentication token in the headers of your requests.
@@ -93,4 +93,4 @@ All endpoints in this API require authentication. You need to include a valid au
 ```
 ### Error Handling
 - **401 Unauthorized:** The request lacks valid authentication credentials.
-- **422 Unprocessable Entity:** Invalid request parameters or unable to create the item. -->
+- **422 Unprocessable Entity:** Invalid request parameters or unable to create the item.
