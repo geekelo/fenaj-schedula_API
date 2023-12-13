@@ -14,7 +14,6 @@ describe 'Items API' do
           deposit: { type: :integer },
           spa_session_fee: { type: :integer },
           registration_fee: { type: :integer },
-          registration_fee: { type: :integer },
           total_amount_payable: { type: :integer },
           duration: { type: :integer },
           user_id: { type: :integer }
@@ -49,7 +48,6 @@ describe 'Items API' do
                  image: { type: :string },
                  deposit: { type: :integer },
                  spa_session_fee: { type: :integer },
-                 registration_fee: { type: :integer },
                  registration_fee: { type: :integer },
                  total_amount_payable: { type: :integer },
                  duration: { type: :integer },
