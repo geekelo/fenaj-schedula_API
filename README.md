@@ -108,4 +108,32 @@ To run the project, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [add comments, likes and error deduction for rooms.]
+- [] add comments
+- [] add likes  
+- [] error deduction for sessions
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+Please support this project and be a part of something meaningful and impactful. Your contribution can make a significant difference and help us achieve our goals faster.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to express my sincere gratitude to [Murat Korkmaz on Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) for this design and to all my Microverse partners who contributed to this project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
