@@ -14,6 +14,9 @@
 ### Frontend Repository
 [Fenaj Schedula Front End](https://github.com/geekelo/fenaj-schedula)
 
+## Project Kanban board:
+[Kanban-board](https://github.com/users/geekelo/projects/3)
+
 ## 🛠 Built With <a name="built-with"></a>
 
   <ul>
