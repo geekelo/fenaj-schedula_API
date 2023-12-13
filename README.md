@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 # 🏥 Fenaj Schedula API <a name="about-project"></a>
 
-> The Room Rental API allows users to create an account book a new Room and can reserve the Room.
+> The Fenaj Schedula API allows users to create an account, book a new session and can reserve the session.
 
 
 ### Database Schema <a name="ER-diagram"></a>
