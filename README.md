@@ -105,3 +105,7 @@ To run the project, run the following command:
 - LinkedIn: [yemidada](https://www.linkedin.com/in/yemidada/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [add comments, likes and error deduction for rooms.]
