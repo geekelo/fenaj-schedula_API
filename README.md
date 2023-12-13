@@ -66,9 +66,42 @@ Example command:
 
 ### Usage
 
-To run the project redirecting to the root directory of the project and run the following command:
+To run the project, run the following command:
 
 ```sh
- bin/rails server (to run web API)
+ rails s -p 30001
 
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Nasir Mahmood**
+
+- GitHub: [Nasirkhan294](https://github.com/Nasirkhan294)
+- LinkedIn: [nasirmahd](https://www.linkedin.com/in/nasirmahd/)
+
+👤 **Eloghene Otiede**
+
+- GitHub: [@geekelo](https://github.com/geekelo)
+- LinkedIn: [eloghene-otiede](https://www.linkedin.com/in/eloghene-otiede-b146a3232/)
+  
+👤 **Fatima Najafi**
+
+- GitHub: [@fatima-najafi](https://github.com/fatima-najafi)
+- LinkedIn: [fatima-najafi](https://www.linkedin.com/in/fatima-najafi/)
+
+👤 **Joyce Cruz**
+
+- GitHub: [@balastar](https://github.com/balatstar)
+- LinkedIn: [joyce-ann-cruz](https://www.linkedin.com/in/joyce-ann-cruz-668a41a7/)
+
+👤 **Adeyemi Dada**
+
+- GitHub: [@yemidada](https://github.com/yemidada)
+- LinkedIn: [yemidada](https://www.linkedin.com/in/yemidada/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
