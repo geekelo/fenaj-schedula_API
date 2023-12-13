@@ -108,9 +108,9 @@ To run the project, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [] add comments
-- [] add likes  
-- [] error deduction for sessions
+- [ ] add comments
+- [ ] add likes  
+- [ ] error deduction for sessions
 
 <!-- CONTRIBUTING -->
 
