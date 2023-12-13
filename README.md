@@ -14,6 +14,9 @@
 ### Frontend Repository
 [Fenaj Schedula Front End](https://github.com/geekelo/fenaj-schedula)
 
+### Api Documentation
+API DOCUMENTATION - domain/api-docs
+
 ## Project Kanban board:
 [Kanban-board](https://github.com/users/geekelo/projects/3)
 
