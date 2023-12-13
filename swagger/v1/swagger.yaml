@@ -1,0 +1,280 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/v1/signup":
+    post:
+      summary: Creates a user
+      tags:
+      - Authentication
+      parameters: []
+      responses:
+        '201':
+          description: blog created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                username:
+                  type: string
+                password:
+                  type: string
+                password_confirmation:
+                  type: string
+              required:
+              - email
+              - username
+              - password
+              - password_confirmation
+  "/v1/login":
+    post:
+      summary: Login
+      tags:
+      - Authentication
+      parameters: []
+      responses:
+        '201':
+          description: blog created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+              - email
+              - password
+  "/api/v1/items":
+    post:
+      summary: Creates a items
+      tags:
+      - Blogs
+      parameters: []
+      responses:
+        '201':
+          description: items created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  type: string
+                image:
+                  type: string
+                deposit:
+                  type: integer
+                spa_session_fee:
+                  type: integer
+                registration_fee:
+                  type: integer
+                total_amount_payable:
+                  type: integer
+                duration:
+                  type: integer
+                user_id:
+                  type: integer
+              required:
+              - description
+              - user_id
+              - duration
+  "/api/v1/items/{id}":
+    get:
+      summary: Retrieves a items
+      tags:
+      - Items
+      - Another Tag
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: blog found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  description:
+                    type: string
+                  image:
+                    type: string
+                  deposit:
+                    type: integer
+                  spa_session_fee:
+                    type: integer
+                  registration_fee:
+                    type: integer
+                  total_amount_payable:
+                    type: integer
+                  duration:
+                    type: integer
+                  user_id:
+                    type: integer
+                required:
+                - id
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  description:
+                    type: string
+                  image:
+                    type: string
+                  deposit:
+                    type: integer
+                  spa_session_fee:
+                    type: integer
+                  registration_fee:
+                    type: integer
+                  total_amount_payable:
+                    type: integer
+                  duration:
+                    type: integer
+                  user_id:
+                    type: integer
+                required:
+                - id
+        '404':
+          description: item not found
+        '406':
+          description: unsupported accept header
+    delete:
+      summary: Delete a item
+      tags:
+      - Items
+      - Another Tag
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Successful
+        '404':
+          description: Item not found
+        '406':
+          description: unsupported accept header
+  "/api/v1/reservations":
+    post:
+      summary: Creates a reservation
+      tags:
+      - Blogs
+      parameters: []
+      responses:
+        '201':
+          description: reservation created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                city:
+                  type: string
+                date:
+                  type: date
+                item_id:
+                  type: integer
+                user_id:
+                  type: integer
+              required:
+              - city
+              - date
+              - user_id
+              - item_id
+  "/api/v1/reservations/{id}":
+    get:
+      summary: Retrieves a reservations
+      tags:
+      - Reservations
+      - Another Tag
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: blog found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  city:
+                    type: string
+                  date:
+                    type: date
+                  item_id:
+                    type: integer
+                  user_id:
+                    type: integer
+                required:
+                - id
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  city:
+                    type: string
+                  date:
+                    type: date
+                  item_id:
+                    type: integer
+                  user_id:
+                    type: integer
+                required:
+                - id
+        '404':
+          description: Reservation not found
+        '406':
+          description: unsupported accept header
+    delete:
+      summary: Delete a reservations
+      tags:
+      - Reservations
+      - Another Tag
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Successful
+        '404':
+          description: Reservation not found
+        '406':
+          description: unsupported accept header
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
