@@ -41,7 +41,7 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def new
-    item = Item.new
+    Item.new
   end
 
   def create
