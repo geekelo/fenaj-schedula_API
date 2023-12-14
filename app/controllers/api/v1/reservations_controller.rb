@@ -1,7 +1,7 @@
 class Api::V1::ReservationsController < ApplicationController
   before_action :authenticate_token!
 
-   # GET /api/reservations 
+  # GET /api/reservations
   def index
     @api_reservations = Reservation.all
 
@@ -28,7 +28,7 @@ class Api::V1::ReservationsController < ApplicationController
     end
   end
 
-  # DELETE /api/reservations/1 
+  # DELETE /api/reservations/1
   def destroy
     reservation = Reservation.find(params[:id])
     if reservation.destroy
@@ -50,10 +50,10 @@ class Api::V1::ReservationsController < ApplicationController
       city: reservation.city,
       date: reservation.date,
       user_id: reservation.user_id,
-       item_id: reservation.item_id
+      item_id: reservation.item_id
       # item: {
       #   id: reservation.item.id,
-      #   name: reservation.item.name, 
+      #   name: reservation.item.name,
       #   description: reservation.item.description,
       #   spa_session_fee: reservation.item.spa_session_fee,
       #   registration_fee: reservation.item.registration_fee,
@@ -64,4 +64,3 @@ class Api::V1::ReservationsController < ApplicationController
     }
   end
 end
-
