@@ -18,7 +18,7 @@
 API DOCUMENTATION - domain/api-docs
 
 ## Kanban Board:
-[Kanban-board](https://github.com/users/geekelo/projects/3)
+[Kanban-board](https://github.com/users/geekelo/projects/3)<br>
 [Initial board state](https://github.com/geekelo/fenaj-schedula_API/issues/25)
 
 ## Team:
