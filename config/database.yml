@@ -83,6 +83,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: fenaj_schedula_api_production
   username: fenaj_schedula_api
   password: <%= ENV["FENAJ_SCHEDULA_API_DATABASE_PASSWORD"] %>
