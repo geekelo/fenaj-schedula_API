@@ -4,7 +4,7 @@ info:
   title: API V1
   version: v1
 paths:
-  "/v1/signup":
+  "api/v1/signup":
     post:
       summary: Creates a user
       tags:
@@ -34,7 +34,7 @@ paths:
               - username
               - password
               - password_confirmation
-  "/v1/login":
+  "api/v1/login":
     post:
       summary: Login
       tags:
@@ -75,6 +75,8 @@ paths:
             schema:
               type: object
               properties:
+                name:
+                  type: string
                 description:
                   type: string
                 image:
@@ -274,7 +276,7 @@ paths:
         '406':
           description: unsupported accept header
 servers:
-- url: https://{defaultHost}
+- url: https://fenaj-schedula-api.onrender.com/
   variables:
     defaultHost:
       default: www.example.com
