@@ -6,12 +6,25 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
-Rails.application.config.middleware.insert_before 0, Rack::Cors do
-    allow do
-      origins 'https://fenaj-schedula.onrender.com/'
+# Rails.application.config.middleware.insert_before 0, Rack::Cors do
+#     allow do
+#       origins 'https://fenaj-schedula.onrender.com/'
   
-      resource '*',
-               headers: :any,
-               methods: %i[get post patch put delete]
-    end
+#       resource '*',
+#                headers: :any,
+#                methods: %i[get post patch put delete]
+#     end
+#   end
+
+# config/initializers/cors.rb
+
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'https://fenaj-schedula.onrender.com' # Add your frontend origin(s)
+
+    resource '/api/*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head],
+      credentials: true
   end
+end
