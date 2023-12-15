@@ -42,7 +42,6 @@ gem 'rswag-ui'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mswin mswin64 mingw x64_mingw]
-  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'rswag-specs'
 end
@@ -55,3 +54,4 @@ end
 gem 'active_model_serializers'
 gem 'bcrypt'
 gem 'jwt'
+gem 'dotenv-rails'
