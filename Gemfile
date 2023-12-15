@@ -38,12 +38,14 @@ gem 'rack-cors'
 gem 'rswag'
 gem 'rswag-api'
 gem 'rswag-ui'
+gem 'rswag-specs'
+gem 'rspec-rails'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mswin mswin64 mingw x64_mingw]
-  gem 'rspec-rails'
-  gem 'rswag-specs'
+  # gem 'rspec-rails'
+  # gem 'rswag-specs'
 end
 
 group :development do
