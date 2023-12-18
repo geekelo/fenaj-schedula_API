@@ -1,4 +1,5 @@
 <a name="readme-top"></a>
+  <img src="https://geekelo.com.ng/wp-content/uploads/2023/12/project-signature1.gif" alt="signature" >
 # 🏥 Fenaj Schedula API <a name="about-project"></a>
 
 > The Fenaj Schedula API allows users to create an account, book a new session and can reserve the session.
